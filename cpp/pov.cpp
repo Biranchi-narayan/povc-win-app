@@ -3,18 +3,18 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define COMMANDFILE "h:\\pov-cylinder.txt"
+#define COMMANDFILE "H:\\pov-cylinder.txt"
 
 //------------------------------------------------------
     int pov::send(const wchar_t *W) 
 //------------------------------------------------------
 // Return value:
-//	0: SUCCES
+//	0: SUCCESS
 //	1: File open error
 //	2: File exists
 {
 	FILE *fp;
-	int Size = wcslen(W);
+	size_t Size = wcslen(W);
 	char *CString = new char[Size + 1];
 	CString[Size] = 0;
 	for (int y = 0; y<Size; y++)
